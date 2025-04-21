@@ -45,7 +45,7 @@ public class Items {
         this.quantity = quantity;
         this.shipping = shipping;
         this.importance = importance;
-        this.description = description;
+        this.description = description; //optional?
         this.link = link; //optional?
         this.invoice = invoice; //optional?
     }
@@ -156,25 +156,25 @@ public class Items {
 
     /**
      * Retrieves the description of an item
-     * @return description
+     * @return the description of the item
      */
     public String getDescriptionItem() { return description;}
 
     /**
      * Sets the description of the item
-     * @param description
+     * @param description the changes related to the description
      */
     public void setDescriptionItem(String description) { this.description = description;}
 
     /**
      * Retrieves the link of an item
-     * @return
+     * @return the link of an item
      */
     public String getLinkItem() { return link;}
 
     /**
      * Sets the link of an item
-     * @param link
+     * @param link set a new link to the item
      */
     public void setLinkItem(String link) { this.link = link;}
 
@@ -186,8 +186,12 @@ public class Items {
 
     /**
      * sets the invoice for an item
-     * @param invoice
+     * @param invoice set the invoice of an item
      */
     public void setInvoiceItem(String invoice) { this.invoice = invoice;}
 
+
+    public String toString() {
+        return getClass().getName() + getBuyerItem() + getPriceItem() + getQuantityItem() + getShippingItem() + getImportanceItem() + getDescriptionItem() + getLinkItem() + getInvoiceItem();
+    }
 }
